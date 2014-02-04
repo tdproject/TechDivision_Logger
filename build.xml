@@ -35,157 +35,157 @@
         <!-- create the directory -->
         <mkdir dir="${pear.lib.dir}" />
     	<!-- initialize the PEAR directory and the CI packages -->
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="config-create" />
-            <arg value="${pear.lib.dir}" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}" />
+            <arg value="${pear.dir}/pear.conf" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="config-set" />
             <arg value="preferred_state" />
             <arg value="beta" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
             <arg value="PEAR" />
         </exec>    	
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
             <arg value="PHP_CodeSniffer" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
             <arg value="PHPDocumentor" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="channel-update" />
             <arg value="pear.php.net" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="channel-discover" />
             <arg value="pear.pdepend.org" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
             <arg value="pdepend/PHP_Depend" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="channel-discover" />
             <arg value="pear.phpmd.org" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
             <arg value="phpmd/PHP_PMD" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="channel-discover" />
             <arg value="pear.phpunit.de" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="channel-discover" />
             <arg value="components.ez.no" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="channel-discover" />
             <arg value="pear.symfony-project.com" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
             <arg value="phpunit/phpunit" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
             <arg value="phpunit/phploc" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
             <arg value="phpunit/phpcpd" />
         </exec>
         <!-- project specific packages -->
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="channel-discover" />
             <arg value="pear.firephp.org" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
             <arg value="firephp/FirePHPCore" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="channel-discover" />
-            <arg value="connect.techdivision.com" />
+            <arg value="pear.appserver.io/library" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
-            <arg value="techdivision/TechDivision_XHProfPHPUnit" />
+            <arg value="library/TechDivision_XHProfPHPUnit" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
-            <arg value="techdivision/TechDivision_PEAR" />
+            <arg value="library/TechDivision_PEAR" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
-            <arg value="techdivision/TechDivision_Lang" />
+            <arg value="library/TechDivision_Lang" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
-            <arg value="techdivision/TechDivision_Util" />
+            <arg value="library/TechDivision_Util" />
         </exec>
-        <exec dir="${pear.lib.dir}" executable="${pear.bin.dir}/pear">
+        <exec dir="${pear.dir}" executable="${pear.bin}">
             <arg value="-c" />
-            <arg value="${pear.lib.dir}/pear.conf" />
+            <arg value="${pear.dir}/pear.conf" />
             <arg value="install" />
-            <arg value="techdivision/TechDivision_Properties" />
+            <arg value="library/TechDivision_Properties" />
         </exec>
     </target>
     <!-- ==================================================================== -->
     <!-- Copies the sources to the target directory                           -->
     <!-- ==================================================================== -->
     <target name="reset-pear" description="Deletes the PEAR directory.">
-        <delete dir="${pear.lib.dir}"/>
+        <delete dir="${pear.dir}"/>
     	<antcall target="prepare-pear"/>
     </target>
 	<!-- ==================================================================== -->
@@ -226,11 +226,20 @@
 				<expandproperties/>
 			</filterchain>
 		</copy>
-		<exec dir="${php-target.dir}" executable="${pear.lib.dir}/pear/pear">
-			<arg line="techdivision-contents -T ${php-target.dir}/package2.xml -S ${php-target.dir} -D ${php-target.dir} -M ${unique.name}"/>
+		<exec dir="${php-target.dir}" executable="${pear.bin}">
+			<arg value="techdivision-contents"/>
+            <arg value="-T"/>
+			<arg value="${php-target.dir}/package2.xml"/>
+			<arg value="-S"/>
+			<arg value="${php-target.dir}"/>
+            <arg value="-D"/>
+            <arg value="${php-target.dir}"/>
+            <arg value="-M"/>
+            <arg value="${unique.name}"/>
 		</exec>
-        <exec dir="${php-target.dir}" executable="${pear.lib.dir}/pear/pear">
-        	<arg line="package package2.xml"/>
+        <exec dir="${php-target.dir}" executable="${pear.bin}">
+            <arg value="package"/>
+            <arg value="package2.xml"/>
         </exec>
     </target>
     <!-- ==================================================================== -->
@@ -316,8 +325,9 @@
     <target name="upload-release" >
         <echo message="Releasing ${namespace}_${module}-${release.version}.tgz on ${pear.channel}..."/>
     	<exec executable="${curl.bin}"  outputproperty="exec.response">
-			<arg line='-F hash="${pear.api.hash}" -F qqfile=@"${php-target.dir}/${namespace}-${release.version}.tgz" -s http://${pear.channel}/upload'/>
+			<arg line='-F hash="${pear.api.hash}" -F qqfile=@"${php-target.dir}/${namespace}_${module}-${release.version}.tgz" -s http://${pear.channel}/upload'/>
 		</exec>
+		<echo>${exec.response}</echo>
     </target>
     <!-- ==================================================================== -->
     <!-- Release new patch version                                            -->
@@ -361,6 +371,9 @@
         <exec executable="${git.bin}" dir="${basedir}">
             <arg line="commit -a -m '${release.changelog}'" />
         </exec>
+		<exec executable="${git.bin}" dir="${basedir}">
+			<arg line="push" />
+		</exec>
         <exec executable="${git.bin}" dir="${basedir}">
             <arg line="tag -a -m '${release.changelog}' release-${tag.release.version}" />
         </exec>
